@@ -1,0 +1,15 @@
+
+<p [ngClass] = "'elemento1 elemento2'">Prueba de ngClass</p>
+
+<p class="elemento1 elemento2">Test de la clase</p>
+
+<p ngClass="{'elemento1': pEstado, 'elemento2': sEstado}">Testeando directiva ngClass</p>
+
+<table>
+    <tr *ngFor="let aux of [1,2,3,4,5,6,7]">
+        <td [ngClass]="{'color1': aux%2==0, 'color2': aux%2==1}">{{aux}}</td>
+    </tr>
+</table>
+
+<p [ngClass]="forma">Probado la directiva ngClass</p>
+<button (click)="cambiar()">Cambiar</button>

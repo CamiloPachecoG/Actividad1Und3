@@ -1,0 +1,35 @@
+
+<div class="container-lg mt-5">
+
+    <div class="row">
+        <div class="col-md-3">
+            <h3>Agregar producto</h3>
+            <form [formGroup]="formulario">
+                <div class="form-group">
+                    <label>Producto:</label>
+                    <input type="text" class="form-control" formControlName="producto">
+                </div>
+                <div class="form-group">
+                    <label>cantidad:</label>
+                    <input type="text" class="form-control" formControlName="cantidad">
+                </div>
+                
+                <button class="btn btn-block btn-outline-primary" (click)="validaciones()">Pagar</button>
+                <p>{{mensaje}}</p>
+            </form>
+        </div>
+
+        <div class="col-md-5">
+            <h3>Lista de productos disponibles:</h3>
+            <ul *ngFor="let productos of lista">
+                <li>Nombre: {{productos.producto}}</li>
+                <li>Precio: {{productos.precio}}</li>
+            </ul>
+        </div>
+
+        <div class="col-md-4">
+            <h3>Total a pagar:</h3>
+            <p>{{totalCompra|currency:'USD'}}</p>
+        </div>
+    </div>
+</div>
